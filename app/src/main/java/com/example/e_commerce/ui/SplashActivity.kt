@@ -6,17 +6,20 @@ import android.os.Bundle
 import android.os.Handler
 import com.example.e_commerce.MainActivity
 import com.example.e_commerce.R
+import com.example.e_commerce.databinding.ActivitySplashBinding
+import com.example.e_commerce.ui.base.BaseActivity
+import com.example.e_commerce.viewModels.SplashViewModel
 
-class SplashActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splash)
+class SplashActivity : BaseActivity<ActivitySplashBinding, SplashViewModel>(
+    layoutId = R.layout.activity_splash,
+    viewModelClass = SplashViewModel::class.java
+) {
 
-        Handler().postDelayed({
+    override fun onInitDataBinding() {
+  /*      Handler().postDelayed({
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish()
         }, 2000)
-        supportActionBar?.hide()
-    }
+        supportActionBar?.hide() */   }
 }
