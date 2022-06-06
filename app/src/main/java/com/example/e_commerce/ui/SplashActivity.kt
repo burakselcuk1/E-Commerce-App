@@ -16,10 +16,11 @@ class SplashActivity : BaseActivity<ActivitySplashBinding, SplashViewModel>(
 ) {
 
     override fun onInitDataBinding() {
-  /*      Handler().postDelayed({
+        Handler().postDelayed({
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish()
         }, 2000)
-        supportActionBar?.hide() */   }
+        supportActionBar?.hide()
+          }
 }
