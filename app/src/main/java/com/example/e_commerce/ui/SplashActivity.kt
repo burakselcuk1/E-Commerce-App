@@ -8,6 +8,7 @@ import com.example.e_commerce.MainActivity
 import com.example.e_commerce.R
 import com.example.e_commerce.databinding.ActivitySplashBinding
 import com.example.e_commerce.ui.base.BaseActivity
+import com.example.e_commerce.ui.login.LoginActivity
 import com.example.e_commerce.viewModels.SplashViewModel
 
 class SplashActivity : BaseActivity<ActivitySplashBinding, SplashViewModel>(
@@ -17,7 +18,7 @@ class SplashActivity : BaseActivity<ActivitySplashBinding, SplashViewModel>(
 
     override fun onInitDataBinding() {
         Handler().postDelayed({
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
             finish()
         }, 2000)
