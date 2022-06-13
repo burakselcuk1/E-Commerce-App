@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -13,7 +13,7 @@
         android:layout_height="match_parent"
         android:padding="20dp"
         android:background="@color/main_color"
-        tools:context=".ui.login.LoginFragment">
+        tools:context=".ui.login.signup.SignupFragment">
 
         <ImageView
             android:id="@+id/imageView"
@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:fontFamily="monospace"
-            android:text="LOGIN"
+            android:text="Create an account"
             android:textColor="@color/white"
             android:textSize="26sp"
             android:textStyle="bold"
@@ -72,7 +72,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="28dp"
             android:backgroundTint="@color/white"
-            android:text="LOGIN"
+            android:text="sıgnup"
             android:textColor="@color/main_color"
             app:layout_constraintEnd_toEndOf="@+id/editText2"
             app:layout_constraintHorizontal_bias="0.498"
