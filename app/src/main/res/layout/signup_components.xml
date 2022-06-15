@@ -10,6 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+
         >
 
 
@@ -46,7 +47,7 @@
             android:layout_marginStart="32dp"
             android:layout_marginEnd="32dp"
             android:layout_marginTop="10dp"
-            android:hint="Name"
+            android:hint="Password"
             android:padding="20dp"
             app:counterMaxLength="20"
             app:endIconMode="clear_text"
@@ -59,6 +60,7 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/textInputEditText2"
                 android:layout_width="match_parent"
+                android:inputType="textVisiblePassword"
                 android:layout_height="wrap_content"
                 android:maxLength="20" />
         </com.google.android.material.textfield.TextInputLayout>
