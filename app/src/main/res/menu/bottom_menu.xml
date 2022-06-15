@@ -4,20 +4,20 @@
     <item
         android:id="@+id/homePageFragment"
         android:title="burak"
-        android:icon="@drawable/ic_launcher_foreground"/>
+        android:icon="@drawable/ic_baseline_account_circle_24"/>
     <item
         android:id="@+id/dealFragment"
         android:title="burask"
-        android:icon="@drawable/ic_shopbag"/>
+        android:icon="@drawable/ic_baseline_account_circle_24"/>
 
     <item
         android:id="@+id/myBagFragment"
         android:title="buraak"
-        android:icon="@drawable/ic_launcher_foreground"/>
+        android:icon="@drawable/ic_baseline_account_circle_24"/>
 
     <item
         android:id="@+id/profileFragment"
         android:title="buradk"
-        android:icon="@drawable/ic_launcher_foreground"/>
+        android:icon="@drawable/ic_baseline_account_circle_24"/>
 
 </menu>

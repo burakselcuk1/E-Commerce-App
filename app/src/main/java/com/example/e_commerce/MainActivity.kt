@@ -21,6 +21,6 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>(
     override fun onInitDataBinding() {
         //Bottom Nav Menu
         navController= Navigation.findNavController(this,R.id.fragmentContainerView)
-        setupWithNavController(binding.bottomNavigationView,navController)
+        setupWithNavController(binding.bottomNavigationView4,navController)
     }
 }
