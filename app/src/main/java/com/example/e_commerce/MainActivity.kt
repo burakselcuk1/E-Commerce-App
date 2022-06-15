@@ -6,7 +6,9 @@ import android.os.Handler
 import android.os.Looper
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
+import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI.setupWithNavController
+import androidx.navigation.ui.setupActionBarWithNavController
 import com.airbnb.lottie.LottieAnimationView
 import com.example.e_commerce.databinding.ActivityMainBinding
 import com.example.e_commerce.ui.base.BaseActivity
@@ -20,7 +22,15 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>(
 
     override fun onInitDataBinding() {
         //Bottom Nav Menu
-        navController= Navigation.findNavController(this,R.id.fragmentContainerView)
+
+        navController = findNavController(R.id.fragmentContainerView)
         setupWithNavController(binding.bottomNavigationView4,navController)
+        setupActionBarWithNavController(navController)
     }
+
+    //For back proccess
+    override fun onSupportNavigateUp(): Boolean {
+        return navController.navigateUp() || super.onSupportNavigateUp()
+    }
+
 }
