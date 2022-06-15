@@ -12,43 +12,34 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="20dp"
-        android:background="@color/main_color"
+        android:background="@color/white"
         tools:context=".ui.login.signup.SignupFragment">
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_marginTop="16dp"
-            android:src="@drawable/logobeyaz"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="24dp"
             android:fontFamily="monospace"
             android:text="Create an account"
-            android:textColor="@color/white"
+            android:textColor="@color/main_color"
             android:textSize="26sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="@+id/imageView"
-            app:layout_constraintStart_toStartOf="@+id/imageView"
-            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/editText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="52dp"
-            android:backgroundTint="@color/white"
+            android:backgroundTint="@color/main_color"
             android:hint="Email"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
+            android:textColor="@color/main_color"
+            android:textColorHint="@color/main_color"
             app:layout_constraintTop_toBottomOf="@+id/textView"
             tools:layout_editor_absoluteX="24dp" />
 
@@ -58,10 +49,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="36dp"
-            android:backgroundTint="@color/white"
+            android:backgroundTint="@color/main_color"
             android:hint="Password"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
+            android:textColor="@color/main_color"
+            android:textColorHint="@color/main_color"
             app:layout_constraintEnd_toEndOf="@+id/editText"
             app:layout_constraintStart_toStartOf="@+id/editText"
             app:layout_constraintTop_toBottomOf="@+id/editText" />
@@ -71,9 +62,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="28dp"
-            android:backgroundTint="@color/white"
+            android:backgroundTint="@color/main_color"
             android:text="sıgnup"
-            android:textColor="@color/main_color"
+            android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="@+id/editText2"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="@+id/editText2"
@@ -85,8 +76,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
-            android:text="Create an account"
-            android:textColor="@color/white"
+            android:text="OR"
+            android:textColor="@color/main_color"
             app:layout_constraintEnd_toEndOf="@+id/appCompatButton"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="@+id/appCompatButton"
@@ -95,11 +86,13 @@
         <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/googlee"
+            android:src="@drawable/maincolorlogo"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/appCompatButton"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="@+id/appCompatButton"
-            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+            app:layout_constraintTop_toBottomOf="@+id/textView2"
+            app:layout_constraintVertical_bias="0.074" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

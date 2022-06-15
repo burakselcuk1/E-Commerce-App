@@ -35,8 +35,6 @@ abstract class BaseActivity<DB : ViewDataBinding, VM : BaseViewModel>(
         onInitDataBinding()
     }
 
-
-
     override fun onPause() {
         super.onPause()
     }
