@@ -7,6 +7,10 @@
 
     </data>
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -23,7 +27,7 @@
             android:layout_marginTop="24dp"
             android:fontFamily="monospace"
             android:text="Create an account"
-            android:textColor="@color/main_color"
+            android:textColor="#333333"
             android:textSize="26sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -31,44 +35,27 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
-            android:id="@+id/editText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="52dp"
-            android:backgroundTint="@color/main_color"
-            android:hint="Email"
-            android:textColor="@color/main_color"
-            android:textColorHint="@color/main_color"
-            app:layout_constraintTop_toBottomOf="@+id/textView"
-            tools:layout_editor_absoluteX="24dp" />
-
-
-        <EditText
-            android:id="@+id/editText2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="36dp"
-            android:backgroundTint="@color/main_color"
-            android:hint="Password"
-            android:textColor="@color/main_color"
-            android:textColorHint="@color/main_color"
-            app:layout_constraintEnd_toEndOf="@+id/editText"
-            app:layout_constraintStart_toStartOf="@+id/editText"
-            app:layout_constraintTop_toBottomOf="@+id/editText" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/appCompatButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
+            android:layout_marginTop="32dp"
             android:backgroundTint="@color/main_color"
             android:text="sıgnup"
             android:textColor="@color/white"
-            app:layout_constraintEnd_toEndOf="@+id/editText2"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintStart_toStartOf="@+id/editText2"
-            app:layout_constraintTop_toBottomOf="@+id/editText2" />
+            app:layout_constraintTop_toBottomOf="@+id/signupComponent"
+            tools:layout_editor_absoluteX="16dp" />
+
+        <include
+            android:id="@+id/signupComponent"
+            layout="@layout/signup_components"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="56dp"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            tools:layout_editor_absoluteX="16dp" />
+
 
 
         <TextView
@@ -77,7 +64,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
             android:text="OR"
-            android:textColor="@color/main_color"
+            android:textColor="#333333"
             app:layout_constraintEnd_toEndOf="@+id/appCompatButton"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="@+id/appCompatButton"
@@ -96,5 +83,7 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
 
 </layout>

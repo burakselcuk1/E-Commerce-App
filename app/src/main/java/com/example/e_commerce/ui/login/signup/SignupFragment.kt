@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
 import com.example.e_commerce.MainActivity
 import com.example.e_commerce.R
 import com.example.e_commerce.databinding.FragmentSignupBinding
@@ -24,5 +25,8 @@ class SignupFragment : BaseFragment<FragmentSignupBinding, SignUpViewModel>(
                 startActivity(intent)
             }
         }
+
+
+
     }
 }
