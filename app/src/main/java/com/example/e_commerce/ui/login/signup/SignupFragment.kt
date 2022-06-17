@@ -25,8 +25,14 @@ class SignupFragment : BaseFragment<FragmentSignupBinding, SignUpViewModel>(
                 startActivity(intent)
             }
         }
+    }
 
+    override fun onResume() {
+        super.onResume()
+        val genders = resources.getStringArray(R.array.gender)
 
+        val arrayAdapter = ArrayAdapter(requireContext(),R.layout.drop_down_item,R.id.textView, genders)
+        binding.signupComponent.autoCompleteTextView.setAdapter(arrayAdapter)
 
     }
 }
