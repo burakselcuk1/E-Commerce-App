@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
@@ -8,7 +9,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="619dp"
         android:padding="20dp"
         tools:context=".ui.homePage.HomePageFragment">
 
@@ -16,7 +17,17 @@
             android:id="@+id/topSide"
             layout="@layout/top_side"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/slider"
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/topSide"
+            tools:layout_editor_absoluteX="20dp" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
