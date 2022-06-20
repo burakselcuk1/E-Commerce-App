@@ -18,6 +18,7 @@
             android:layout_height="150dp"
             url="@{category.url}"
             app:layout_constraintStart_toStartOf="parent"
+            android:src="@drawable/logonormal"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
