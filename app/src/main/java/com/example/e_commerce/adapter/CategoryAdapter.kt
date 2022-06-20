@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.e_commerce.data.Category
 import com.example.e_commerce.databinding.CategoryItemBinding
 
-class CategoryAdapter( val dataSet: ArrayList<Category>) :
+class CategoryAdapter(val dataSet: ArrayList<Category>) :
     RecyclerView.Adapter<CategoryAdapter.ViewHolder>() {
     private lateinit var binding: CategoryItemBinding
 
