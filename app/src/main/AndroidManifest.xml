@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.e_commerce">
 
-
+<uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:name=".Application"
         android:allowBackup="true"
