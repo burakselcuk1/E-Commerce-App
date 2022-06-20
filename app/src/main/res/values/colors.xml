@@ -11,4 +11,7 @@
     //SPLASH SCREEN
     <color name="main_color">#e9343d</color>
 
+    //FRAGMENT HOME BACKGROUND
+    <color name="fragment_home_background_color">#f7f7f7</color>
+
 </resources>
