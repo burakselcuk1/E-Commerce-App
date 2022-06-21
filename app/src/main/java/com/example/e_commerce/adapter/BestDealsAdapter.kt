@@ -31,6 +31,7 @@ class BestDealsAdapter(val dataSet: ArrayList<com.example.e_commerce.data.BestDe
         binding.bozoo.setPaintFlags(binding.bozoo.getPaintFlags() or Paint.STRIKE_THRU_TEXT_FLAG)
         binding.floatButton.setOnClickListener {
             Toast.makeText(it!!.context, "Added in basket", Toast.LENGTH_SHORT).show()
+
         }
 
     }
