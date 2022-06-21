@@ -9,6 +9,7 @@ import com.denzcoskun.imageslider.ImageSlider
 import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.models.SlideModel
 import com.example.e_commerce.R
+import com.example.e_commerce.adapter.BestDealsAdapter
 import com.example.e_commerce.adapter.CategoryAdapter
 import com.example.e_commerce.data.Category
 import com.example.e_commerce.data.CategoryItems
@@ -22,6 +23,7 @@ class HomePageFragment : BaseFragment<FragmentHomePageBinding, HomePageViewModel
 ) {
 
     private lateinit var categoryAdapter: CategoryAdapter
+    private lateinit var bestDealsAdapter: BestDealsAdapter
 
     override fun onInitDataBinding() {
 
@@ -33,6 +35,15 @@ class HomePageFragment : BaseFragment<FragmentHomePageBinding, HomePageViewModel
 
         binding.include.imageSlider.setImageList(imageList)
         defineFirstRecyclerView()
+        defineSecondRecyclerView()
+    }
+
+    private fun defineSecondRecyclerView() {
+        viewModel.bestDealValues.observe(viewLifecycleOwner, Observer {
+            bestDealsAdapter = BestDealsAdapter(it)
+            binding.bestDealRecyclerView.layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL,false)
+            binding.bestDealRecyclerView.adapter = bestDealsAdapter
+        })
     }
 
     private fun defineFirstRecyclerView() {
