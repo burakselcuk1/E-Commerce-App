@@ -1,18 +1,13 @@
 package com.example.e_commerce.ui.homePage
 
-import android.view.ViewGroup
-import android.widget.HorizontalScrollView
+import android.graphics.Paint
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
-
-import com.denzcoskun.imageslider.ImageSlider
 import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.models.SlideModel
 import com.example.e_commerce.R
 import com.example.e_commerce.adapter.BestDealsAdapter
 import com.example.e_commerce.adapter.CategoryAdapter
-import com.example.e_commerce.data.Category
-import com.example.e_commerce.data.CategoryItems
 import com.example.e_commerce.databinding.FragmentHomePageBinding
 import com.example.e_commerce.ui.base.BaseFragment
 
@@ -36,6 +31,8 @@ class HomePageFragment : BaseFragment<FragmentHomePageBinding, HomePageViewModel
         binding.include.imageSlider.setImageList(imageList)
         defineFirstRecyclerView()
         defineSecondRecyclerView()
+
+
     }
 
     private fun defineSecondRecyclerView() {
