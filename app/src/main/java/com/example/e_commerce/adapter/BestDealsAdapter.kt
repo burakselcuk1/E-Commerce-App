@@ -4,9 +4,12 @@ import android.graphics.Color
 import android.graphics.Paint
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.e_commerce.R
 import com.example.e_commerce.databinding.BestDealRecyclerviewRowItemBinding
+import dagger.hilt.android.internal.Contexts.getApplication
+import kotlin.coroutines.coroutineContext
 
 class BestDealsAdapter(val dataSet: ArrayList<com.example.e_commerce.data.BestDeals>) :
     RecyclerView.Adapter<BestDealsAdapter.ViewHolder>() {
@@ -26,6 +29,9 @@ class BestDealsAdapter(val dataSet: ArrayList<com.example.e_commerce.data.BestDe
         viewHolder.view.bestDeals = dataSet[position]
 
         binding.bozoo.setPaintFlags(binding.bozoo.getPaintFlags() or Paint.STRIKE_THRU_TEXT_FLAG)
+        binding.floatButton.setOnClickListener {
+            Toast.makeText(it!!.context, "Added in basket", Toast.LENGTH_SHORT).show()
+        }
 
     }
 
