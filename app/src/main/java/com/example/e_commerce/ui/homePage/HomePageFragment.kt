@@ -24,7 +24,7 @@ class HomePageFragment : BaseFragment<FragmentHomePageBinding, HomePageViewModel
 
         val imageList = ArrayList<SlideModel>() // Create image list
 
-        imageList.add(SlideModel(R.drawable.par, "The animal population decreased by 58 percent in 42 years.", ScaleTypes.CENTER_CROP))
+        imageList.add(SlideModel(R.drawable.par, "Etlerimiz helal kesimdir. Bizzat ben kestim.", ScaleTypes.CENTER_CROP))
         imageList.add(SlideModel(R.drawable.par, "The animal population decreased by 58 percent in 42 years.", ScaleTypes.CENTER_CROP))
         imageList.add(SlideModel(R.drawable.par, "The animal population decreased by 58 percent in 42 years.", ScaleTypes.CENTER_CROP))
 

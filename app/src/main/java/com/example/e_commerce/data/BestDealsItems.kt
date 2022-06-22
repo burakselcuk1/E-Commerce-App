@@ -8,7 +8,7 @@ class BestDealsItems {
         val cc = BestDeals("Fish","https://img.freepik.com/free-photo/fish-steak-white-backgrounds_183352-882.jpg?w=2000")
         val d = BestDeals("Vegetables","https://images.fineartamerica.com/images-medium-large-5/tomato-vegetables-pile-isolated-on-white-background-cutout-wanlop-sonngam.jpg")
 
-        val c = arrayListOf(a,b,cc,d)
+        val c = arrayListOf(cc,d,a,b)
         return c
     }
 }
