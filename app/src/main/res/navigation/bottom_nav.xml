@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_homePageFragment_to_dealFragment"
             app:destination="@id/dealFragment" />
+        <action
+            android:id="@+id/action_homePageFragment_to_notificationFragment"
+            app:destination="@id/notificationFragment" />
     </fragment>
     <fragment
         android:id="@+id/dealFragment"
@@ -37,4 +40,9 @@
         android:name="com.example.e_commerce.ui.ProfileFragment"
         android:label="Profile"
         tools:layout="@layout/fragment_profile" />
+    <dialog
+        android:id="@+id/notificationFragment"
+        android:name="com.example.e_commerce.ui.notification.NotificationFragment"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification" />
 </navigation>

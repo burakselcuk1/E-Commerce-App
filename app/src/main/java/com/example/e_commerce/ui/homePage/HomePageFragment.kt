@@ -2,6 +2,7 @@ package com.example.e_commerce.ui.homePage
 
 import android.graphics.Paint
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.denzcoskun.imageslider.constants.ScaleTypes
 import com.denzcoskun.imageslider.models.SlideModel
@@ -31,8 +32,14 @@ class HomePageFragment : BaseFragment<FragmentHomePageBinding, HomePageViewModel
         binding.include.imageSlider.setImageList(imageList)
         defineFirstRecyclerView()
         defineSecondRecyclerView()
+        clickNotification()
 
+    }
 
+    private fun clickNotification() {
+        binding.include2.imageView22.setOnClickListener {
+            findNavController().navigate(R.id.action_homePageFragment_to_notificationFragment)
+        }
     }
 
     private fun defineSecondRecyclerView() {

@@ -18,7 +18,7 @@
         tools:context=".ui.homePage.HomePageFragment">
 
         <include
-            android:id="@+id/topSide"
+            android:id="@+id/include2"
             layout="@layout/top_side"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
@@ -29,7 +29,7 @@
             android:layout_marginTop="15dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/topSide"
+            app:layout_constraintTop_toBottomOf="@+id/include2"
             tools:layout_editor_absoluteX="20dp" />
 
         <TextView
