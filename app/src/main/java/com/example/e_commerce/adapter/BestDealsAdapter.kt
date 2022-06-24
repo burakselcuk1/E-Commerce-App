@@ -5,6 +5,7 @@ import android.graphics.Paint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.example.e_commerce.R
 import com.example.e_commerce.databinding.BestDealRecyclerviewRowItemBinding
@@ -32,6 +33,11 @@ class BestDealsAdapter(val dataSet: ArrayList<com.example.e_commerce.data.BestDe
         binding.floatButton.setOnClickListener {
             Toast.makeText(it!!.context, "Added in basket", Toast.LENGTH_SHORT).show()
 
+        }
+
+        viewHolder.itemView.setOnClickListener {
+            val navigationController = Navigation.findNavController(viewHolder.itemView)
+            navigationController.navigate(R.id.action_homePageFragment_to_dealFragment)
         }
 
     }

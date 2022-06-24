@@ -7,7 +7,7 @@
         android:icon="@drawable/ic_baseline_home_24"/>
     <item
         android:id="@+id/dealFragment"
-        android:title="burask"
+        android:title="Best Deal"
         android:icon="@drawable/ic_baseline_autorenew_24"/>
 
     <item
