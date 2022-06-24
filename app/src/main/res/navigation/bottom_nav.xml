@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_homePageFragment_to_notificationFragment"
             app:destination="@id/notificationFragment" />
+        <action
+            android:id="@+id/action_homePageFragment_to_categoryragment"
+            app:destination="@id/categoryragment" />
     </fragment>
     <fragment
         android:id="@+id/dealFragment"
@@ -45,4 +48,8 @@
         android:name="com.example.e_commerce.ui.notification.NotificationFragment"
         android:label="fragment_notification"
         tools:layout="@layout/fragment_notification" />
+    <fragment
+        android:id="@+id/categoryragment"
+        android:name="com.example.e_commerce.ui.category.Categoryragment"
+        android:label="Category" />
 </navigation>

@@ -6,16 +6,35 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.e_commerce.R
+import com.example.e_commerce.databinding.FragmentCategoryragmentBinding
+import com.example.e_commerce.ui.base.BaseFragment
+import com.example.e_commerce.ui.category.adapter.ViewPagerAdapter
+import com.google.android.material.tabs.TabLayoutMediator
 
 
-class Categoryragment : Fragment() {
+class Categoryragment :BaseFragment<FragmentCategoryragmentBinding,CategoryViewModel>(
+    R.layout.fragment_categoryragment,
+    viewModelClass = CategoryViewModel::class.java
+) {
+    override fun onInitDataBinding() {
+        val adapter = fragmentManager?.let { ViewPagerAdapter(it,lifecycle) }
+        binding.viewPager.adapter = adapter
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_categoryragment, container, false)
+        TabLayoutMediator(binding.tabLayout,binding.viewPager){tab,position->
+            when(position){
+                0->{
+                    tab.text ="Beef"
+                }
+                1->{
+                    tab.text="Mutton"
+                }
+                2->{
+                    tab.text="Fish"
+                }
+                3->{
+                    tab.text="Vegetab"
+                }
+            }
+        }.attach()
     }
-
 }
