@@ -18,19 +18,13 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>(
     layoutId = R.layout.activity_main,
     viewModelClass = MainViewModel::class.java
 ) {
-    private lateinit var navController: NavController
 
     override fun onInitDataBinding() {
         //Bottom Nav Menu
 
-        navController = findNavController(R.id.fragmentContainerView)
-        setupWithNavController(binding.bottomNavigationView4,navController)
-        setupActionBarWithNavController(navController)
+
     }
 
-    //For back proccess
-    override fun onSupportNavigateUp(): Boolean {
-        return navController.navigateUp() || super.onSupportNavigateUp()
-    }
+
 
 }
