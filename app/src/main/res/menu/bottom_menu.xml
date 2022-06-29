@@ -11,6 +11,11 @@
         android:icon="@drawable/ic_baseline_autorenew_24"/>
 
     <item
+        android:id="@+id/myBagFragment444"
+        android:title=""
+        />
+
+    <item
         android:id="@+id/myBagFragment"
         android:title="Basket"
         android:icon="@drawable/ic_baseline_shopping_cart_24"/>

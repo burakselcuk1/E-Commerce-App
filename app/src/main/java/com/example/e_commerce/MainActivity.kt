@@ -36,6 +36,10 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>(
         findViewById<Toolbar>(R.id.toolbar2).setupWithNavController(navController, config)
 
 
+        binding.bottomNavigationView4.background = null
+        binding.floatbutton.background = null
+
+
     }
 
 
