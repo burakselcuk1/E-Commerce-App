@@ -26,10 +26,6 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>(
 
     override fun onInitDataBinding() {
 
-
-
-
-
         InıtBottomNavMenu()
         floatButtonClick()
         bottomNavProperties()

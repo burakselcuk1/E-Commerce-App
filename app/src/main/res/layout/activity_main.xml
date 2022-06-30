@@ -15,6 +15,7 @@
         android:id="@+id/coordinatorLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
         app:layout_constraintBottom_toBottomOf="parent"
         tools:context=".MainActivity">
 
@@ -30,7 +31,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:menu="@menu/bottom_menu" />
         </com.google.android.material.bottomappbar.BottomAppBar>
 
@@ -40,7 +40,6 @@
             app:backgroundTint="@color/main_color"
             android:layout_height="wrap_content"
             app:tint="@android:color/white"
-
             android:src="@drawable/ic_baseline_add_24"
             app:layout_anchor="@id/bottomAppBar" />
 
