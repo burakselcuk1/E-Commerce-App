@@ -24,10 +24,6 @@ class BeefAdapter(val dataSet: ArrayList<Beef>) :
     override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
         viewHolder.view.categoryBeef = dataSet[position]
 
-        viewHolder.itemView.setOnClickListener {
-            val navigationController = Navigation.findNavController(viewHolder.itemView)
-            navigationController.navigate(R.id.action_homePageFragment_to_categoryragment)
-        }
     }
 
     // Return the size of your dataset (invoked by the layout manager)

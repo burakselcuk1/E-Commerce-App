@@ -25,8 +25,8 @@
 
             <ImageView
                 android:id="@+id/imageView3"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
                 url="@{categoryBeef.url}"
                 app:layout_constraintStart_toStartOf="parent"
                 android:src="@drawable/logonormal"
