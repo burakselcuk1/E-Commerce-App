@@ -1,5 +1,6 @@
 package com.example.e_commerce.adapter.Category
 
+import android.graphics.Paint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.Navigation
@@ -24,9 +25,9 @@ class BeefAdapter(val dataSet: ArrayList<Beef>) :
     override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
         viewHolder.view.categoryBeef = dataSet[position]
 
+        binding.bozoo.setPaintFlags(binding.bozoo.getPaintFlags() or Paint.STRIKE_THRU_TEXT_FLAG)
+
+
     }
-
-    // Return the size of your dataset (invoked by the layout manager)
     override fun getItemCount() = dataSet.size
-
 }

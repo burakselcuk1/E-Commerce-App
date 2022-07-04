@@ -33,7 +33,14 @@ class HomePageFragment : BaseFragment<FragmentHomePageBinding, HomePageViewModel
         defineFirstRecyclerView()
         defineSecondRecyclerView()
         clickNotification()
+        clickSeeAllFirst()
 
+    }
+
+    private fun clickSeeAllFirst() {
+        binding.seeAllFirst.setOnClickListener {
+            findNavController().navigate(R.id.action_homePageFragment_to_categoryragment)
+        }
     }
 
     private fun clickNotification() {

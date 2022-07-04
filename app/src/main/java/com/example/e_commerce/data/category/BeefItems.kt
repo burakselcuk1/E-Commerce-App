@@ -5,27 +5,14 @@ import com.example.e_commerce.data.BestDeals
 class BeefItems {
 
     fun defineDatas(): ArrayList<Beef> {
-        val a = Beef("Beef Meat","https://res.cloudinary.com/fleetnation/image/private/c_fit,w_1120/g_south,l_text:style_gothic2:%C2%A9%20Lubos%20Chlubny,o_20,y_10/g_center,l_watermark4,o_25,y_50/v1451683758/x8tintzjuzmlfrcbkfbp.jpg")
-        val b = Beef("Mutton Meat","https://www.provisioneronline.com/ext/resources/images/Responsive-Default-Images/meat-science-review.jpg?1607975249")
-        val cc = Beef("Fish","https://img.freepik.com/free-photo/fish-steak-white-backgrounds_183352-882.jpg?w=2000")
-        val d = Beef("Vegetables","https://images.fineartamerica.com/images-medium-large-5/tomato-vegetables-pile-isolated-on-white-background-cutout-wanlop-sonngam.jpg")
+        val a = Beef("Beef Steak-Roast","https://bakbugross.com/images/dana-biftek-rosto-2-453062.jpg","250","140")
+        val b = Beef("Cattle Beef","https://nebilcdn.blob.core.windows.net/citylinux/0023293_dana-kontrafile-1-kg_510.jpg","236","200")
+        val cc = Beef("Beef Mince","https://cdn.cimri.io/market/260x260/ersan-400-gr-dana-kiyma-_910611.jpg","90","50")
+        val d = Beef("Cattle Sheets","https://cdn.cimri.io/market/260x260/1-kg-dana-kusbasi-_286488.jpg","236","200")
+        val cc1 = Beef("Beef Chop","https://www.egebaranet.com.tr/images/urun/253_pirzola.jpg","236","200")
+        val d1 = Beef("Beef Tenderloin","https://kalorisor.com/uploads/images/urun/fileto-bonfile-sigir-eti.jpg","236","200")
 
-        val a1 = Beef("Beef Meat","https://res.cloudinary.com/fleetnation/image/private/c_fit,w_1120/g_south,l_text:style_gothic2:%C2%A9%20Lubos%20Chlubny,o_20,y_10/g_center,l_watermark4,o_25,y_50/v1451683758/x8tintzjuzmlfrcbkfbp.jpg")
-        val b1 = Beef("Mutton Meat","https://www.provisioneronline.com/ext/resources/images/Responsive-Default-Images/meat-science-review.jpg?1607975249")
-        val cc1 = Beef("Fish","https://img.freepik.com/free-photo/fish-steak-white-backgrounds_183352-882.jpg?w=2000")
-        val d1 = Beef("Vegetables","https://images.fineartamerica.com/images-medium-large-5/tomato-vegetables-pile-isolated-on-white-background-cutout-wanlop-sonngam.jpg")
-
-        val a2 = Beef("Beef Meat","https://res.cloudinary.com/fleetnation/image/private/c_fit,w_1120/g_south,l_text:style_gothic2:%C2%A9%20Lubos%20Chlubny,o_20,y_10/g_center,l_watermark4,o_25,y_50/v1451683758/x8tintzjuzmlfrcbkfbp.jpg")
-        val b2 = Beef("Mutton Meat","https://www.provisioneronline.com/ext/resources/images/Responsive-Default-Images/meat-science-review.jpg?1607975249")
-        val cc2 = Beef("Fish","https://img.freepik.com/free-photo/fish-steak-white-backgrounds_183352-882.jpg?w=2000")
-        val d2 = Beef("Vegetables","https://images.fineartamerica.com/images-medium-large-5/tomato-vegetables-pile-isolated-on-white-background-cutout-wanlop-sonngam.jpg")
-
-        val a12 = Beef("Beef Meat","https://res.cloudinary.com/fleetnation/image/private/c_fit,w_1120/g_south,l_text:style_gothic2:%C2%A9%20Lubos%20Chlubny,o_20,y_10/g_center,l_watermark4,o_25,y_50/v1451683758/x8tintzjuzmlfrcbkfbp.jpg")
-        val b12 = Beef("Mutton Meat","https://www.provisioneronline.com/ext/resources/images/Responsive-Default-Images/meat-science-review.jpg?1607975249")
-        val cc12 = Beef("Fish","https://img.freepik.com/free-photo/fish-steak-white-backgrounds_183352-882.jpg?w=2000")
-        val d12 = Beef("Vegetables","https://images.fineartamerica.com/images-medium-large-5/tomato-vegetables-pile-isolated-on-white-background-cutout-wanlop-sonngam.jpg")
-
-        val c = arrayListOf(cc,d,a,b,cc1,d1,a1,b1,cc2,d2,a2,b2,cc12,d12,a12,b12)
+        val c = arrayListOf(cc,d,a,b,cc1,d1)
         return c
     }
 }
