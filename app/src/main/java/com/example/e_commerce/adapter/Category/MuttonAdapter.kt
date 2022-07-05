@@ -3,8 +3,7 @@ package com.example.e_commerce.adapter.Category
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.e_commerce.data.category.Beef
-import com.example.e_commerce.data.category.Mutton
+import com.example.e_commerce.data.category.mutton.Mutton
 import com.example.e_commerce.databinding.CategoryMuttonRowItemBinding
 
 class MuttonAdapter(val dataSet: ArrayList<Mutton>) :

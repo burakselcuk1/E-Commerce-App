@@ -2,11 +2,12 @@ package com.example.e_commerce.ui.category
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.example.e_commerce.data.Category
-import com.example.e_commerce.data.category.Beef
-import com.example.e_commerce.data.category.BeefItems
-import com.example.e_commerce.data.category.Mutton
-import com.example.e_commerce.data.category.MuttonItems
+import com.example.e_commerce.data.category.beef.Beef
+import com.example.e_commerce.data.category.beef.BeefItems
+import com.example.e_commerce.data.category.fish.Fish
+import com.example.e_commerce.data.category.fish.FishItem
+import com.example.e_commerce.data.category.mutton.Mutton
+import com.example.e_commerce.data.category.mutton.MuttonItems
 import com.example.e_commerce.viewModels.BaseViewModel
 import kotlinx.coroutines.launch
 
@@ -14,17 +15,21 @@ class CategoryViewModel: BaseViewModel() {
 
     private val _beefValues : MutableLiveData<ArrayList<Beef>> = MutableLiveData()
     private val _muttonValues : MutableLiveData<ArrayList<Mutton>> = MutableLiveData()
+    private val _fishValues : MutableLiveData<ArrayList<Fish>> = MutableLiveData()
 
     val beefValues :MutableLiveData<ArrayList<Beef>> = _beefValues
     val muttonValues :MutableLiveData<ArrayList<Mutton>> = _muttonValues
+    val fishValues :MutableLiveData<ArrayList<Fish>> = _fishValues
 
     val valueBeef = BeefItems()
     val valueMutton = MuttonItems()
+    val valueFish = FishItem()
 
     init {
         viewModelScope.launch {
             _beefValues.postValue(valueBeef.defineDatas())
             _muttonValues.postValue(valueMutton.defineDatas())
+            _fishValues.postValue(valueFish.defineDatas())
         }
     }
 }

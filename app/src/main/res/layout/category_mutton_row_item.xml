@@ -6,7 +6,7 @@
     <data>
         <variable
             name="categoryMutton"
-            type="com.example.e_commerce.data.category.Mutton"/>
+            type="com.example.e_commerce.data.category.mutton.Mutton"/>
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

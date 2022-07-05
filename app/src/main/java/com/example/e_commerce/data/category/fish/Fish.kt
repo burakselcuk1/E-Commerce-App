@@ -1,6 +1,6 @@
-package com.example.e_commerce.data.category
+package com.example.e_commerce.data.category.fish
 
-data class Mutton(
+data class Fish(
     val isim:String,
     val url:String,
     val oldPrice:String,

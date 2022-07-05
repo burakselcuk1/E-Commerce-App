@@ -1,4 +1,4 @@
-package com.example.e_commerce.data.category
+package com.example.e_commerce.data.category.beef
 
 data class Beef(
     val isim:String,

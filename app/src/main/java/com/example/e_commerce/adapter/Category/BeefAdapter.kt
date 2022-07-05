@@ -3,10 +3,8 @@ package com.example.e_commerce.adapter.Category
 import android.graphics.Paint
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
-import com.example.e_commerce.R
-import com.example.e_commerce.data.category.Beef
+import com.example.e_commerce.data.category.beef.Beef
 import com.example.e_commerce.databinding.CategoryBeefRowItemBinding
 
 class BeefAdapter(val dataSet: ArrayList<Beef>) :

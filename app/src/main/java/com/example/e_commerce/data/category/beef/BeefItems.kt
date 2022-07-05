@@ -1,6 +1,4 @@
-package com.example.e_commerce.data.category
-
-import com.example.e_commerce.data.BestDeals
+package com.example.e_commerce.data.category.beef
 
 class BeefItems {
 
