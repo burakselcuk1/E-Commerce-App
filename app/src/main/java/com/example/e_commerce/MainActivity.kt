@@ -37,7 +37,7 @@ class MainActivity : BaseActivity<ActivityMainBinding, MainViewModel>(
     //Init BottomNavMenu
     private fun InıtBottomNavMenu() {
         navController = findNavController(R.id.fragmentContainerView)
-        setupWithNavController(binding.bottomNavigationView4,navController)
+        setupWithNavController(binding.bottomNavigationView4, navController)
     }
 
     //Init Toolbar
