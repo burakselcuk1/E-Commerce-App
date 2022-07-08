@@ -1,14 +1,150 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.ProfileFragment">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <data>
+
+    </data>
+
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:padding="20dp"
+        tools:context=".ui.ProfileFragment">
 
-</FrameLayout>
+      <androidx.constraintlayout.widget.ConstraintLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+
+          <de.hdodenhof.circleimageview.CircleImageView
+              android:id="@+id/circleImageView"
+              android:layout_width="100dp"
+              android:layout_height="100dp"
+              android:layout_marginTop="16dp"
+              android:src="@drawable/akil"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintHorizontal_bias="0.498"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toTopOf="parent" />
+
+          <EditText
+              android:id="@+id/editText"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="20dp"
+              android:hint="Burak Selcuk"
+
+              android:textColorHint="#505050"
+              app:layout_constraintTop_toBottomOf="@+id/circleImageView"
+              tools:layout_editor_absoluteX="16dp" />
+
+          <EditText
+              android:id="@+id/editText2"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="10dp"
+              android:hint="+90 551 388 32 58 "
+              android:textColorHint="#505050"
+              app:layout_constraintTop_toBottomOf="@+id/editText"
+              tools:layout_editor_absoluteX="0dp" />
+
+          <EditText
+              android:id="@+id/editText3"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="10dp"
+              android:hint="burakbaba1903@gmail.com"
+              android:textColorHint="#505050"
+              app:layout_constraintTop_toBottomOf="@+id/editText2" />
+
+
+          <TextView
+              android:id="@+id/textView9"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="8dp"
+              android:text="Gender (Optional)"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toBottomOf="@+id/editText3" />
+
+          <TextView
+              android:id="@+id/textVie1w9"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Date of birth (Optional)"
+              android:layout_marginTop="10dp"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+
+          <TextView
+              android:id="@+id/text1Vie1w9"
+              android:layout_width="wrap_content"
+              android:layout_marginTop="10dp"
+              android:layout_height="wrap_content"
+              android:text="Rather not say"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintTop_toBottomOf="@+id/textView91" />
+
+          <TextView
+              android:id="@+id/textView91"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Male"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintTop_toTopOf="@+id/textView9" />
+
+          <TextView
+              android:id="@+id/textView8"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="32dp"
+              android:text="Terms and conditions"
+              android:textColor="@color/main_color"
+              android:textStyle="bold"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintHorizontal_bias="0.497"
+              app:layout_constraintStart_toStartOf="@+id/editText3"
+              app:layout_constraintTop_toBottomOf="@+id/textVie1w9" />
+
+          <androidx.appcompat.widget.AppCompatButton
+              android:id="@+id/button1"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="18dp"
+              android:backgroundTint="@color/main_color"
+              android:text="All My Points"
+              android:textColor="@color/white"
+              app:layout_constraintTop_toBottomOf="@+id/textView8"
+              tools:layout_editor_absoluteX="0dp" />
+
+          <androidx.appcompat.widget.AppCompatButton
+              android:id="@+id/button2"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="10dp"
+              android:backgroundTint="@color/main_color"
+              android:text="Change My Password"
+              android:textColor="@color/white"
+              app:layout_constraintTop_toBottomOf="@+id/button1"
+              tools:layout_editor_absoluteX="0dp" />
+
+
+          <androidx.appcompat.widget.AppCompatButton
+              android:id="@+id/button3"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginTop="10dp"
+              android:backgroundTint="@color/main_color"
+              android:text="logout"
+              android:textColor="@color/white"
+              app:layout_constraintTop_toBottomOf="@+id/button2"
+              tools:layout_editor_absoluteX="0dp" />
+
+
+
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</layout>
