@@ -1,6 +1,11 @@
 package com.example.e_commerce.ui.homePage
 
 import android.graphics.Paint
+import android.view.View
+import android.widget.Toast
+import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.core.view.GravityCompat
+import androidx.drawerlayout.widget.DrawerLayout
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -11,6 +16,7 @@ import com.example.e_commerce.adapter.BestDealsAdapter
 import com.example.e_commerce.adapter.CategoryAdapter
 import com.example.e_commerce.databinding.FragmentHomePageBinding
 import com.example.e_commerce.ui.base.BaseFragment
+import com.google.android.material.navigation.NavigationView
 
 
 class HomePageFragment : BaseFragment<FragmentHomePageBinding, HomePageViewModel>(
@@ -20,6 +26,8 @@ class HomePageFragment : BaseFragment<FragmentHomePageBinding, HomePageViewModel
 
     private lateinit var categoryAdapter: CategoryAdapter
     private lateinit var bestDealsAdapter: BestDealsAdapter
+    lateinit var toogle: ActionBarDrawerToggle
+
 
     override fun onInitDataBinding() {
 
@@ -34,7 +42,36 @@ class HomePageFragment : BaseFragment<FragmentHomePageBinding, HomePageViewModel
         defineSecondRecyclerView()
         clickNotification()
         clickSeeAllFirst()
+        openDrawerMenu()
 
+
+        val drawerLayout : DrawerLayout = binding.drawerLayout
+        val navView : NavigationView = binding.navView
+
+        toogle = ActionBarDrawerToggle(requireActivity(),drawerLayout,R.string.open,R.string.close)
+        drawerLayout.addDrawerListener(toogle)
+        toogle.syncState()
+
+        navView.setNavigationItemSelectedListener {
+            when(it.itemId){
+                 R.id.pageFive -> Toast.makeText(requireContext(),"Click Five", Toast.LENGTH_SHORT).show()
+            }
+            true
+        }
+    }
+
+    private fun openDrawerMenu() {
+        binding.include2.drawerMenuIcon.setOnClickListener {
+            openCloseNavigationDrawer(it)
+        }
+    }
+
+    fun openCloseNavigationDrawer(view: View) {
+        if (binding.drawerLayout.isDrawerOpen(GravityCompat.START)) {
+            binding.drawerLayout.closeDrawer(GravityCompat.START)
+        } else {
+            binding.drawerLayout.openDrawer(GravityCompat.START)
+        }
     }
 
     private fun clickSeeAllFirst() {
