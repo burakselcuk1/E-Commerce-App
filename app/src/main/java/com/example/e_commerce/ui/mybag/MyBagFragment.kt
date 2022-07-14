@@ -4,18 +4,14 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.activity.OnBackPressedCallback
-import androidx.core.net.toUri
-import androidx.fragment.app.FragmentManager
-import androidx.lifecycle.Observer
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.GridLayoutManager
 import com.example.e_commerce.R
 import com.example.e_commerce.adapter.Category.BeefAdapter
 import com.example.e_commerce.data.category.beef.Beef
+import com.example.e_commerce.data.category.beef.BeefItems
 import com.example.e_commerce.databinding.FragmentMyBagBinding
 import com.example.e_commerce.ui.base.BaseFragment
-import com.example.e_commerce.ui.category.beef.BeefViewModel
-import dagger.hilt.android.AndroidEntryPoint
 
 class MyBagFragment : BaseFragment<FragmentMyBagBinding, MyBagViewModel>(
     R.layout.fragment_my_bag,
@@ -34,12 +30,13 @@ class MyBagFragment : BaseFragment<FragmentMyBagBinding, MyBagViewModel>(
             Log.e("burak", beefId)
         }
 
+        val a:BeefItems
 
 
     }
 
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    override fun onViewCreated(view: View, savedInstanceState:  Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, object : OnBackPressedCallback(true){
             override fun handleOnBackPressed() {
@@ -48,4 +45,5 @@ class MyBagFragment : BaseFragment<FragmentMyBagBinding, MyBagViewModel>(
 
         })
     }
+
 }
