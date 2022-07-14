@@ -31,12 +31,15 @@
     </fragment>
     <fragment
         android:id="@+id/myBagFragment"
-        android:name="com.example.e_commerce.ui.MyBagFragment"
+        android:name="com.example.e_commerce.ui.mybag.MyBagFragment"
         android:label="My Bag"
         tools:layout="@layout/fragment_my_bag" >
         <action
             android:id="@+id/action_myBagFragment_to_profileFragment"
             app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_myBagFragment_to_categoryragment"
+            app:destination="@id/categoryragment" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
@@ -51,5 +54,20 @@
     <fragment
         android:id="@+id/categoryragment"
         android:name="com.example.e_commerce.ui.category.Categoryragment"
-        android:label="Category" />
+        android:label="Category" >
+        <action
+            android:id="@+id/action_categoryragment_to_myBagFragment"
+            app:destination="@id/myBagFragment" />
+        <action
+            android:id="@+id/action_categoryragment_to_dealFragment"
+            app:destination="@id/dealFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/beefFragment"
+        android:name="com.example.e_commerce.ui.category.beef.BeefFragment"
+        android:label="BeefFragment" >
+        <action
+            android:id="@+id/action_beefFragment_to_myBagFragment"
+            app:destination="@id/myBagFragment" />
+    </fragment>
 </navigation>

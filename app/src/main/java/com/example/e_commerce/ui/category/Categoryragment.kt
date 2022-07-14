@@ -12,7 +12,7 @@ import com.example.e_commerce.ui.category.adapter.ViewPagerAdapter
 import com.google.android.material.tabs.TabLayoutMediator
 
 
-class Categoryragment :BaseFragment<FragmentCategoryragmentBinding,CategoryViewModel>(
+class Categoryragment: BaseFragment<FragmentCategoryragmentBinding,CategoryViewModel>(
     R.layout.fragment_categoryragment,
     viewModelClass = CategoryViewModel::class.java
 ) {
