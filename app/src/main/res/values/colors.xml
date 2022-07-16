@@ -8,10 +8,15 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
+
+
     //SPLASH SCREEN
     <color name="main_color">#e9343d</color>
 
     //FRAGMENT HOME BACKGROUND
     <color name="fragment_home_background_color">#f7f7f7</color>
+
+    <color name="progress_button_done_color">#FF4C4C4C</color>
+
 
 </resources>
