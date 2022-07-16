@@ -1,17 +1,13 @@
 package com.example.e_commerce.ui.login.signup
 
 import android.content.Intent
-import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.os.Handler
 import android.widget.ArrayAdapter
 import com.example.e_commerce.MainActivity
 import com.example.e_commerce.R
 import com.example.e_commerce.databinding.FragmentSignupBinding
 import com.example.e_commerce.ui.base.BaseFragment
-import com.example.e_commerce.ui.login.LoginActivity
+import com.example.e_commerce.util.ProgressButton
 
 
 class SignupFragment : BaseFragment<FragmentSignupBinding, SignUpViewModel>(
@@ -20,9 +16,19 @@ class SignupFragment : BaseFragment<FragmentSignupBinding, SignUpViewModel>(
 ) {
     override fun onInitDataBinding() {
         with(binding){
-            appCompatButton.setOnClickListener {
-                val intent = Intent(this@SignupFragment.requireContext(), MainActivity::class.java)
-                startActivity(intent)
+            myProgressButton.setOnClickListener {
+
+                val progressButton = view?.let { it1 -> context?.let { it2 -> ProgressButton(it2, it1) } }
+
+                progressButton?.ActiveButton()
+
+                Handler().postDelayed({
+                    progressButton?.finishButton()
+                    Handler().postDelayed({
+                        val intent = Intent(this@SignupFragment.requireContext(), MainActivity::class.java)
+                        startActivity(intent)
+                    },1000)
+                },3000)
             }
         }
     }

@@ -35,7 +35,7 @@ class BeefAdapter(val dataSet: ArrayList<Beef>) :
 
         viewHolder.itemView.setOnClickListener {
             val bundle = Bundle()
-            bundle.putString("beefId",""+dataSet.get(position))
+            bundle.putSerializable("beefId",dataSet.get(position))
 
             val navigationController = Navigation.findNavController(viewHolder.itemView)
             navigationController.navigate(R.id.action_categoryragment_to_myBagFragment, bundle)

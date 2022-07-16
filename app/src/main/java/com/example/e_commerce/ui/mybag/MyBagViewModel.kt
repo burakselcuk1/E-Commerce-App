@@ -10,8 +10,12 @@ import com.example.e_commerce.viewModels.BaseViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-class MyBagViewModel: BaseViewModel() {
+class MyBagViewModel : BaseViewModel() {
 
 
+
+     fun saveBeef(beef: Beef) = viewModelScope.launch{
+
+    }
 
 }

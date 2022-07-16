@@ -12,6 +12,8 @@ import com.example.e_commerce.data.category.beef.Beef
 import com.example.e_commerce.data.category.beef.BeefItems
 import com.example.e_commerce.databinding.FragmentMyBagBinding
 import com.example.e_commerce.ui.base.BaseFragment
+import kotlinx.coroutines.Job
+import java.io.Serializable
 
 class MyBagFragment : BaseFragment<FragmentMyBagBinding, MyBagViewModel>(
     R.layout.fragment_my_bag,
@@ -24,15 +26,21 @@ class MyBagFragment : BaseFragment<FragmentMyBagBinding, MyBagViewModel>(
     override fun onInitDataBinding() {
 
         val args = this.arguments
-        val beefId: String? = args?.getSerializable("beefId") as String?
+        val beefId: Serializable? = args?.getSerializable("beefId")
 
         if (beefId != null) {
-            Log.e("burak", beefId)
+            Log.e("burak", beefId.toString())
         }
 
-        val a:BeefItems
+ /*       val a = viewModel.saveBeef(beefId as Beef)
 
+        if (a.isCompleted){
+            Log.e("başarılı","saf")
+        }
+        else{
+            Log.e("degğil","saf")
 
+        }*/
     }
 
 
