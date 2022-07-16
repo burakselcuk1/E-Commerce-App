@@ -4,6 +4,7 @@ import android.content.Context
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
+import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
 import androidx.cardview.widget.CardView
@@ -18,6 +19,7 @@ class ProgressButton(context: Context, view: View) {
     var text = view.findViewById<TextView>(R.id.textView1)
     var progressButton = view.findViewById<ProgressBar>(R.id.progressBar)
     var cardView = view.findViewById<CardView>(R.id.cardView)
+    var checkImage = view.findViewById<ImageView>(R.id.check)
     var fade_in:Animation = AnimationUtils.loadAnimation(context,R.anim.fade_in)
 
     fun ActiveButton(){
@@ -30,6 +32,7 @@ class ProgressButton(context: Context, view: View) {
     fun finishButton(){
         progressButton.visibility = View.GONE
         text.text ="Done"
+        checkImage.visibility = View.VISIBLE
         layout.setBackgroundColor(cardView.resources.getColor(android.R.color.system_accent1_400))
     }
 
