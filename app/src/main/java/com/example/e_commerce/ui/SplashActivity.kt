@@ -11,6 +11,7 @@ import com.example.e_commerce.databinding.ActivitySplashBinding
 import com.example.e_commerce.ui.base.BaseActivity
 import com.example.e_commerce.ui.login.LoginActivity
 import com.example.e_commerce.viewModels.SplashViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
 class SplashActivity : BaseActivity<ActivitySplashBinding, SplashViewModel>(
     layoutId = R.layout.activity_splash,

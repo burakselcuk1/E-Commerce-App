@@ -7,15 +7,19 @@ import com.example.e_commerce.data.category.beef.Beef
 import com.example.e_commerce.data.category.beef.BeefItems
 import com.example.e_commerce.repository.SavedBeefRepository
 import com.example.e_commerce.viewModels.BaseViewModel
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-class MyBagViewModel : BaseViewModel() {
+@HiltViewModel
+class MyBagViewModel @Inject constructor(private val repository: SavedBeefRepository): BaseViewModel() {
 
+    init {
 
+    }
 
      fun saveBeef(beef: Beef) = viewModelScope.launch{
-
+        repository.insertBeef(beef)
     }
 
 }

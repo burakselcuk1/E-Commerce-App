@@ -12,6 +12,7 @@ import com.example.e_commerce.data.category.beef.Beef
 import com.example.e_commerce.data.category.beef.BeefItems
 import com.example.e_commerce.databinding.FragmentMyBagBinding
 import com.example.e_commerce.ui.base.BaseFragment
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Job
 import java.io.Serializable
 
