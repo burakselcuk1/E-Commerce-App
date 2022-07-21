@@ -22,4 +22,7 @@ class MyBagViewModel @Inject constructor(private val repository: SavedBeefReposi
         repository.insertBeef(beef)
     }
 
+    val readAllData: LiveData<List<Beef>> = repository.readAllData
+
+
 }

@@ -5,7 +5,10 @@ import android.util.Log
 import android.view.View
 import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.e_commerce.R
 import com.example.e_commerce.adapter.Category.BeefAdapter
 import com.example.e_commerce.data.category.beef.Beef
@@ -23,27 +26,23 @@ class MyBagFragment : BaseFragment<FragmentMyBagBinding, MyBagViewModel>(
     private lateinit var categoryBeefAdapter: BeefAdapter
     lateinit var resultBeef: Beef
 
-
     override fun onInitDataBinding() {
 
         val args = this.arguments
         val beefId: Serializable? = args?.getSerializable("beefId")
 
-        if (beefId != null) {
-            Log.e("burak", beefId.toString())
-        }
+        (beefId as? Beef)?.let { viewModel.saveBeef(it) }
+       readAllData()
 
- /*       val a = viewModel.saveBeef(beefId as Beef)
-
-        if (a.isCompleted){
-            Log.e("başarılı","saf")
-        }
-        else{
-            Log.e("degğil","saf")
-
-        }*/
     }
 
+    private fun readAllData() {
+        viewModel.readAllData.observe(viewLifecycleOwner, Observer {
+            binding.roomRecyclerView.layoutManager = GridLayoutManager(requireContext(),2)
+            categoryBeefAdapter = BeefAdapter(it as ArrayList<Beef>)
+            binding.roomRecyclerView.adapter = categoryBeefAdapter
+        })
+    }
 
     override fun onViewCreated(view: View, savedInstanceState:  Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -54,5 +53,4 @@ class MyBagFragment : BaseFragment<FragmentMyBagBinding, MyBagViewModel>(
 
         })
     }
-
 }
