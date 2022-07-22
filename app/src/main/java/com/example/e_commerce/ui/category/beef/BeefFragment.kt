@@ -4,7 +4,6 @@ import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.e_commerce.R
 import com.example.e_commerce.adapter.Category.BeefAdapter
-import com.example.e_commerce.data.category.beef.Beef
 import com.example.e_commerce.databinding.FragmentBeefBinding
 import com.example.e_commerce.ui.base.BaseFragment
 import com.example.e_commerce.ui.category.CategoryViewModel

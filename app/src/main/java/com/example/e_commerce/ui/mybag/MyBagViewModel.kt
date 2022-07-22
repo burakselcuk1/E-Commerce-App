@@ -14,15 +14,16 @@ import javax.inject.Inject
 @HiltViewModel
 class MyBagViewModel @Inject constructor(private val repository: SavedBeefRepository): BaseViewModel() {
 
-    init {
-
-    }
 
      fun saveBeef(beef: Beef) = viewModelScope.launch{
         repository.insertBeef(beef)
     }
 
     val readAllData: LiveData<List<Beef>> = repository.readAllData
+
+    fun deleteBeef(beef: Beef) = viewModelScope.launch {
+        repository.deleteBeef(beef)
+    }
 
 
 }

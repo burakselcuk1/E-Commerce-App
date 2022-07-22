@@ -1,29 +1,24 @@
 package com.example.e_commerce.ui.mybag
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.activity.OnBackPressedCallback
-import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.e_commerce.R
 import com.example.e_commerce.adapter.Category.BeefAdapter
+import com.example.e_commerce.adapter.RoomAdapter
 import com.example.e_commerce.data.category.beef.Beef
-import com.example.e_commerce.data.category.beef.BeefItems
 import com.example.e_commerce.databinding.FragmentMyBagBinding
 import com.example.e_commerce.ui.base.BaseFragment
-import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.coroutines.Job
 import java.io.Serializable
 
 class MyBagFragment : BaseFragment<FragmentMyBagBinding, MyBagViewModel>(
     R.layout.fragment_my_bag,
     viewModelClass = MyBagViewModel::class.java
 ) {
-    private lateinit var categoryBeefAdapter: BeefAdapter
+    private lateinit var categoryBeefAdapter: RoomAdapter
     lateinit var resultBeef: Beef
 
     override fun onInitDataBinding() {
@@ -39,7 +34,7 @@ class MyBagFragment : BaseFragment<FragmentMyBagBinding, MyBagViewModel>(
     private fun readAllData() {
         viewModel.readAllData.observe(viewLifecycleOwner, Observer {
             binding.roomRecyclerView.layoutManager = GridLayoutManager(requireContext(),2)
-            categoryBeefAdapter = BeefAdapter(it as ArrayList<Beef>)
+            categoryBeefAdapter = RoomAdapter(it as ArrayList<Beef>)
             binding.roomRecyclerView.adapter = categoryBeefAdapter
         })
     }

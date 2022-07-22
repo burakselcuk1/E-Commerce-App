@@ -4,16 +4,13 @@ import android.graphics.Paint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.annotation.IdRes
-import androidx.navigation.NavController
-import androidx.navigation.NavGraph
 import androidx.navigation.Navigation
-import androidx.navigation.fragment.NavHostFragment.Companion.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.e_commerce.R
 import com.example.e_commerce.data.category.beef.Beef
 import com.example.e_commerce.databinding.CategoryBeefRowItemBinding
-import com.example.e_commerce.ui.category.beef.BeefFragmentDirections
+import com.example.e_commerce.ui.mybag.MyBagViewModel
+
 
 class BeefAdapter(val dataSet: ArrayList<Beef>) :
     RecyclerView.Adapter<BeefAdapter.ViewHolder>() {
@@ -30,6 +27,9 @@ class BeefAdapter(val dataSet: ArrayList<Beef>) :
 
     override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
         viewHolder.view.categoryBeef = dataSet[position]
+  /*      viewModel = ViewModelProviders.of(FragmentActivity())
+            .get(MyBagViewModel::class.java)*/
+
 
         binding.bozoo.setPaintFlags(binding.bozoo.getPaintFlags() or Paint.STRIKE_THRU_TEXT_FLAG)
 
@@ -40,7 +40,14 @@ class BeefAdapter(val dataSet: ArrayList<Beef>) :
             val navigationController = Navigation.findNavController(viewHolder.itemView)
             navigationController.navigate(R.id.action_categoryragment_to_myBagFragment, bundle)
 
+
+          /*  val id = dataSet.get(position)
+
+            viewModel.deleteBeef(id)*/
+
+
         }
     }
     override fun getItemCount() = dataSet.size
+
 }
