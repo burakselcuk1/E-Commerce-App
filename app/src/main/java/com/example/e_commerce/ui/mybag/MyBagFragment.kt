@@ -2,12 +2,12 @@ package com.example.e_commerce.ui.mybag
 
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.e_commerce.R
-import com.example.e_commerce.adapter.Category.BeefAdapter
 import com.example.e_commerce.adapter.RoomAdapter
 import com.example.e_commerce.data.category.beef.Beef
 import com.example.e_commerce.databinding.FragmentMyBagBinding
@@ -19,14 +19,13 @@ class MyBagFragment : BaseFragment<FragmentMyBagBinding, MyBagViewModel>(
     viewModelClass = MyBagViewModel::class.java
 ) {
     private lateinit var categoryBeefAdapter: RoomAdapter
-    lateinit var resultBeef: Beef
 
     override fun onInitDataBinding() {
 
         val args = this.arguments
         val beefId: Serializable? = args?.getSerializable("beefId")
 
-        (beefId as? Beef)?.let { viewModel.saveBeef(it) }
+       (beefId as? Beef)?.let { viewModel.saveBeef(it) }
        readAllData()
 
     }
@@ -35,6 +34,13 @@ class MyBagFragment : BaseFragment<FragmentMyBagBinding, MyBagViewModel>(
         viewModel.readAllData.observe(viewLifecycleOwner, Observer {
             binding.roomRecyclerView.layoutManager = GridLayoutManager(requireContext(),2)
             categoryBeefAdapter = RoomAdapter(it as ArrayList<Beef>)
+            categoryBeefAdapter.setOnItemClickListener(object : RoomAdapter.onItemClickListener{
+                override fun OnItemClick(position: Beef) {
+                    println("burak1")
+                    Toast.makeText(requireContext(),"${position.isim}",Toast.LENGTH_SHORT).show()
+                }
+
+            })
             binding.roomRecyclerView.adapter = categoryBeefAdapter
         })
     }

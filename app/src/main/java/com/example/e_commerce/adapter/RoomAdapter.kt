@@ -1,49 +1,59 @@
 package com.example.e_commerce.adapter
 
-import android.graphics.Paint
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentActivity
-import androidx.lifecycle.ViewModelProviders
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.e_commerce.R
 import com.example.e_commerce.data.category.beef.Beef
-import com.example.e_commerce.databinding.RoomItemBinding
-import com.example.e_commerce.ui.mybag.MyBagViewModel
 
 
-class RoomAdapter(val dataSet: ArrayList<Beef>) :
-    RecyclerView.Adapter<RoomAdapter.ViewHolder>() {
+class RoomAdapter(val dataSet: ArrayList<Beef>) : RecyclerView.Adapter<RoomAdapter.ViewHolder>() {
 
-    private lateinit var binding: RoomItemBinding
-    private lateinit var viewModel: MyBagViewModel
+    private lateinit var mListener : onItemClickListener
 
-    class ViewHolder(var view: RoomItemBinding) :
-        RecyclerView.ViewHolder(view.root) {
 
+    interface onItemClickListener {
+        fun OnItemClick(position: Beef)
+    }
+
+    fun setOnItemClickListener(listener: onItemClickListener){
+        mListener = listener
+    }
+
+
+
+    class ViewHolder(view: View, listener: onItemClickListener) :
+        RecyclerView.ViewHolder(view) {
+        val isim: TextView
+        val oldPrice: TextView
+
+
+        init {
+            // Define click listener for the ViewHolder's View.
+            isim = view.findViewById(R.id.bozo)
+            oldPrice = view.findViewById(R.id.bozoo)
+
+        }
     }
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {
-        binding = RoomItemBinding.inflate(LayoutInflater.from(viewGroup.context), viewGroup, false)
-        return ViewHolder(binding)
+        val view = LayoutInflater.from(viewGroup.context)
+            .inflate(R.layout.room_item, viewGroup, false)
+        return ViewHolder(view, mListener)
 
     }
 
     override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
-        viewHolder.view.categoryBeef = dataSet[position]
+        viewHolder.isim.text = dataSet[position].isim
+        viewHolder.oldPrice.text = dataSet[position].oldPrice
 
-        binding.bozoo.setPaintFlags(binding.bozoo.getPaintFlags() or Paint.STRIKE_THRU_TEXT_FLAG)
-
-        binding.floatButton.setOnClickListener {
-            val id = dataSet.get(position)
-
-           // viewModel = ViewModelProviders.of((it as Fragment?)!!).get(MyBagViewModel::class.java)
-           // viewModel.deleteBeef(id)
-
-          Toast.makeText(it.context, id.isim, Toast.LENGTH_SHORT).show()
-
+        val url =  dataSet[position]
+        viewHolder.itemView.setOnClickListener {
+            mListener.OnItemClick(url)
         }
+
     }
 
     private fun deleteAndUpdate(newBeefList: List<Beef>) {
@@ -52,4 +62,6 @@ class RoomAdapter(val dataSet: ArrayList<Beef>) :
     }
 
     override fun getItemCount() = dataSet.size
+
+
 }
