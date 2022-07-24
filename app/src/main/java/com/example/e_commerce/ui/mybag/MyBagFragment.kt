@@ -38,6 +38,8 @@ class MyBagFragment : BaseFragment<FragmentMyBagBinding, MyBagViewModel>(
                 override fun OnItemClick(position: Beef) {
                     println("burak1")
                     Toast.makeText(requireContext(),"${position.isim}",Toast.LENGTH_SHORT).show()
+                    viewModel.deleteBeef(position)
+                    categoryBeefAdapter.notifyDataSetChanged()
                 }
 
             })
