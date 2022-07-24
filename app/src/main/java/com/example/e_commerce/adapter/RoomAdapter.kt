@@ -31,6 +31,7 @@ class RoomAdapter(val dataSet: ArrayList<Beef>) : RecyclerView.Adapter<RoomAdapt
         val isim: TextView
         val oldPrice: TextView
         val image: ImageView
+        val delete: ImageView
 
 
         init {
@@ -38,6 +39,7 @@ class RoomAdapter(val dataSet: ArrayList<Beef>) : RecyclerView.Adapter<RoomAdapt
             isim = view.findViewById(R.id.bozo)
             oldPrice = view.findViewById(R.id.bozoo)
             image = view.findViewById(R.id.imageView3)
+            delete = view.findViewById(R.id.floatButtonn)
 
         }
     }
@@ -54,7 +56,7 @@ class RoomAdapter(val dataSet: ArrayList<Beef>) : RecyclerView.Adapter<RoomAdapt
         viewHolder.oldPrice.text = dataSet[position].oldPrice
 
         val url =  dataSet[position]
-        viewHolder.itemView.setOnClickListener {
+        viewHolder.delete.setOnClickListener {
             mListener.OnItemClick(url)
         }
 
@@ -62,11 +64,6 @@ class RoomAdapter(val dataSet: ArrayList<Beef>) : RecyclerView.Adapter<RoomAdapt
         viewHolder.itemView.apply {
             Glide.with(this).load(urll).into(viewHolder.image)
         }
-    }
-
-    private fun deleteAndUpdate(newBeefList: List<Beef>) {
-
-
     }
 
     override fun getItemCount() = dataSet.size
