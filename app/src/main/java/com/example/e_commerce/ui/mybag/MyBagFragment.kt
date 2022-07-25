@@ -36,12 +36,10 @@ class MyBagFragment : BaseFragment<FragmentMyBagBinding, MyBagViewModel>(
             categoryBeefAdapter = RoomAdapter(it as ArrayList<Beef>)
             categoryBeefAdapter.setOnItemClickListener(object : RoomAdapter.onItemClickListener{
                 override fun OnItemClick(position: Beef) {
-                    println("burak1")
-                    Toast.makeText(requireContext(),"${position.isim}",Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(),"Deleted ${position.isim}",Toast.LENGTH_SHORT).show()
                     viewModel.deleteBeef(position)
                     categoryBeefAdapter.notifyDataSetChanged()
                 }
-
             })
             binding.roomRecyclerView.adapter = categoryBeefAdapter
         })
@@ -53,7 +51,6 @@ class MyBagFragment : BaseFragment<FragmentMyBagBinding, MyBagViewModel>(
             override fun handleOnBackPressed() {
                 findNavController().navigate(R.id.action_myBagFragment_to_categoryragment)
             }
-
         })
     }
 }
