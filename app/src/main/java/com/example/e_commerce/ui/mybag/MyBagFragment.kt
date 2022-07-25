@@ -1,5 +1,6 @@
 package com.example.e_commerce.ui.mybag
 
+import android.app.AlertDialog
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
@@ -34,15 +35,38 @@ class MyBagFragment : BaseFragment<FragmentMyBagBinding, MyBagViewModel>(
         viewModel.readAllData.observe(viewLifecycleOwner, Observer {
             binding.roomRecyclerView.layoutManager = GridLayoutManager(requireContext(),2)
             categoryBeefAdapter = RoomAdapter(it as ArrayList<Beef>)
-            categoryBeefAdapter.setOnItemClickListener(object : RoomAdapter.onItemClickListener{
-                override fun OnItemClick(position: Beef) {
+            binding.roomRecyclerView.adapter = categoryBeefAdapter
+            itemClicked()
+
+        })
+    }
+
+    private fun itemClicked() {
+        categoryBeefAdapter.setOnItemClickListener(object : RoomAdapter.onItemClickListener{
+            override fun OnItemClick(position: Beef) {
+
+
+
+                val builder = AlertDialog.Builder(requireContext())
+                builder.setPositiveButton("Yes"){_, _ ->
                     Toast.makeText(requireContext(),"Deleted ${position.isim}",Toast.LENGTH_SHORT).show()
                     viewModel.deleteBeef(position)
                     categoryBeefAdapter.notifyDataSetChanged()
+
+
                 }
-            })
-            binding.roomRecyclerView.adapter = categoryBeefAdapter
+                builder.setNegativeButton("No"){_, _ ->}
+                builder.setTitle("Delete - ${position.isim}")
+                builder.setMessage("Are you sure delete this product ' ${position.isim} ' ?")
+                builder.create().show()
+
+
+            }
         })
+
+
+
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState:  Bundle?) {
