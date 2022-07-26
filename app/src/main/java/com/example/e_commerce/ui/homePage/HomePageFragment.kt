@@ -51,10 +51,15 @@ class HomePageFragment : BaseFragment<FragmentHomePageBinding, HomePageViewModel
         toogle = ActionBarDrawerToggle(requireActivity(),drawerLayout,R.string.open,R.string.close)
         drawerLayout.addDrawerListener(toogle)
         toogle.syncState()
+        navView.setItemIconTintList(null)
 
         navView.setNavigationItemSelectedListener {
             when(it.itemId){
-                 R.id.pageFive -> Toast.makeText(requireContext(),"Click Five", Toast.LENGTH_SHORT).show()
+                R.id.pageFive -> Toast.makeText(requireContext(),"Clicked Terms and Condition", Toast.LENGTH_SHORT).show()
+                R.id.pageFour -> Toast.makeText(requireContext(),"Clicked FAQ", Toast.LENGTH_SHORT).show()
+                R.id.pageThree -> Toast.makeText(requireContext(),"Clicked Contact Us", Toast.LENGTH_SHORT).show()
+                R.id.pageTwo -> Toast.makeText(requireContext(),"Clicked Maps", Toast.LENGTH_SHORT).show()
+                R.id.pageOne -> Toast.makeText(requireContext(),"Clicked Profile", Toast.LENGTH_SHORT).show()
             }
             true
         }

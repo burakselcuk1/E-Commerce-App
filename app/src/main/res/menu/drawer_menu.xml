@@ -5,25 +5,25 @@
     tools:showIn="navigation_view">
     <item
         android:id="@+id/pageOne"
-        android:title="burak"
-        android:icon="@drawable/ic_launcher_background"/>
+        android:title="Profile"
+        android:icon="@drawable/profieicon"/>
     <item
         android:id="@+id/pageTwo"
-        android:title="burask"
-        android:icon="@drawable/ic_launcher_background"/>
+        android:title="Maps"
+        android:icon="@drawable/ic_maps_and_flags_pin_svgrepo_com"/>
 
     <item
         android:id="@+id/pageThree"
-        android:title="buraak"
-        android:icon="@drawable/ic_launcher_background"/>
+        android:title="Contact Us"
+        android:icon="@drawable/ic_phone_svgrepo_com"/>
 
     <item
         android:id="@+id/pageFour"
-        android:title="buradk"
-        android:icon="@drawable/ic_launcher_background"/>
+        android:title="FAQ"
+        android:icon="@drawable/ic_faq_svgrepo_com"/>
 
     <item
         android:id="@+id/pageFive"
-        android:title="burfak"
-        android:icon="@drawable/ic_launcher_background"/>
+        android:title="Terms and Condition"
+        android:icon="@drawable/ic_writing_tool_svgrepo_com"/>
 </menu>
