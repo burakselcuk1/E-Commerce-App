@@ -7,7 +7,7 @@
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.example.e_commerce.ui.login.LoginFragment"
-        android:label="LoginFragment" >
+        android:label="Login" >
         <action
             android:id="@+id/action_loginFragment_to_signupFragment"
             app:enterAnim="@anim/slide_left"
@@ -18,5 +18,5 @@
     <fragment
         android:id="@+id/signupFragment"
         android:name="com.example.e_commerce.ui.login.signup.SignupFragment"
-        android:label="SignupFragment" />
+        android:label="SignUp" />
 </navigation>
