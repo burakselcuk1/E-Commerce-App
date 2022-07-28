@@ -45,14 +45,11 @@ class MyBagFragment : BaseFragment<FragmentMyBagBinding, MyBagViewModel>(
         categoryBeefAdapter.setOnItemClickListener(object : RoomAdapter.onItemClickListener{
             override fun OnItemClick(position: Beef) {
 
-
-
                 val builder = AlertDialog.Builder(requireContext())
                 builder.setPositiveButton("Yes"){_, _ ->
                     Toast.makeText(requireContext(),"Deleted ${position.isim}",Toast.LENGTH_SHORT).show()
                     viewModel.deleteBeef(position)
                     categoryBeefAdapter.notifyDataSetChanged()
-
 
                 }
                 builder.setNegativeButton("No"){_, _ ->}
@@ -60,13 +57,8 @@ class MyBagFragment : BaseFragment<FragmentMyBagBinding, MyBagViewModel>(
                 builder.setMessage("Are you sure delete this product ' ${position.isim} ' ?")
                 builder.create().show()
 
-
             }
         })
-
-
-
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState:  Bundle?) {

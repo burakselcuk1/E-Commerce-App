@@ -3,6 +3,31 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/burak/AndroidStudioProjects/E-Commerce-Appdevam/app/src/main/res/drawable/category_item_background.xml" value="0.15" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/E-Commerce-Appdevam/app/src/main/res/drawable/ic_baseline_add_circle_24.xml" value="0.1395" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/E-Commerce-Appdevam/app/src/main/res/drawable/ic_baseline_delete_24.xml" value="0.225" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/E-Commerce-Appdevam/app/src/main/res/drawable/ic_baseline_menu_24.xml" value="0.3545" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/E-Commerce-Appdevam/app/src/main/res/layout/activity_login.xml" value="0.46215780998389694" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/E-Commerce-Appdevam/app/src/main/res/layout/activity_main.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/E-Commerce-Appdevam/app/src/main/res/layout/activity_splash.xml" value="0.3592592592592593" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/E-Commerce-Appdevam/app/src/main/res/layout/best_deal_recyclerview_row_item.xml" value="0.5755208333333334" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/E-Commerce-Appdevam/app/src/main/res/layout/category_beef_row_item.xml" value="0.4101851851851852" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/E-Commerce-Appdevam/app/src/main/res/layout/category_item.xml" value="0.5755208333333334" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/E-Commerce-Appdevam/app/src/main/res/layout/category_mutton_row_item.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/E-Commerce-Appdevam/app/src/main/res/layout/category_row_item.xml" value="0.47136752136752136" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/E-Commerce-Appdevam/app/src/main/res/layout/category_vegetables_row_item.xml" value="0.4722222222222222" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/E-Commerce-Appdevam/app/src/main/res/layout/fragment_beef.xml" value="0.40901771336553944" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/E-Commerce-Appdevam/app/src/main/res/layout/fragment_home_page.xml" value="0.3888888888888889" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/E-Commerce-Appdevam/app/src/main/res/layout/fragment_login.xml" value="0.5755208333333334" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/E-Commerce-Appdevam/app/src/main/res/layout/fragment_mutton.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/E-Commerce-Appdevam/app/src/main/res/layout/fragment_my_bag.xml" value="0.328125" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/E-Commerce-Appdevam/app/src/main/res/layout/fragment_profile.xml" value="0.4466666666666667" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/E-Commerce-Appdevam/app/src/main/res/layout/fragment_signup.xml" value="0.5755208333333334" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/E-Commerce-Appdevam/app/src/main/res/layout/fragment_vegetables.xml" value="0.5755208333333334" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/E-Commerce-Appdevam/app/src/main/res/layout/progress_btn_layout.xml" value="0.5755208333333334" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/E-Commerce-Appdevam/app/src/main/res/layout/room_item.xml" value="0.5744791666666667" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/E-Commerce-Appdevam/app/src/main/res/menu/bottom_menu.xml" value="0.5755208333333334" />
+        <entry key="..\:/Users/burak/AndroidStudioProjects/E-Commerce-Appdevam/app/src/main/res/menu/drawer_menu.xml" value="0.5755208333333334" />
         <entry key="..\:/Users/burak/AndroidStudioProjects/ECommerce/app/src/main/res/layout/activity_main.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/burak/AndroidStudioProjects/ECommerce/app/src/main/res/layout/activity_splash.xml" value="0.22" />
         <entry key="..\:/Users/burak/AndroidStudioProjects/ECommerce/app/src/main/res/layout/fragment_deal.xml" value="0.5755208333333334" />
