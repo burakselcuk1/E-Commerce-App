@@ -33,7 +33,14 @@ class ProgressButton(context: Context, view: View) {
         progressButton.visibility = View.GONE
         text.text ="Done"
         checkImage.visibility = View.VISIBLE
-        layout.setBackgroundColor(cardView.resources.getColor(android.R.color.black))
+        layout.setBackgroundColor(cardView.resources.getColor(android.R.color.white))
+    }
+
+    fun ActiveButtonLoginFragment(){
+        progressButton.animation = fade_in
+        text.animation = fade_in
+        progressButton.visibility = View.VISIBLE
+        text.text ="Please Wait..."
     }
 
 }

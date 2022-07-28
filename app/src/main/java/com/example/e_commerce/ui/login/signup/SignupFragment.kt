@@ -3,6 +3,8 @@ package com.example.e_commerce.ui.login.signup
 import android.content.Intent
 import android.os.Handler
 import android.widget.ArrayAdapter
+import android.widget.ProgressBar
+import androidx.cardview.widget.CardView
 import com.example.e_commerce.MainActivity
 import com.example.e_commerce.R
 import com.example.e_commerce.databinding.FragmentSignupBinding
@@ -15,6 +17,16 @@ class SignupFragment : BaseFragment<FragmentSignupBinding, SignUpViewModel>(
     viewModelClass = SignUpViewModel::class.java
 ) {
     override fun onInitDataBinding() {
+        val cardView = view?.findViewById<CardView>(R.id.cardView)
+
+        val progressButton = view?.findViewById<ProgressBar>(R.id.progressBar)
+
+        if (progressButton != null) {
+            progressButton.getIndeterminateDrawable().setColorFilter(
+                getResources().getColor(R.color.white),
+                android.graphics.PorterDuff.Mode.SRC_IN)
+        }
+
         with(binding){
             myProgressButton.setOnClickListener {
 

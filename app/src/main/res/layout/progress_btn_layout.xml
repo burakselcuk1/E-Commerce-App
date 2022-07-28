@@ -39,7 +39,7 @@
                 android:visibility="gone"
                 android:layout_height="30dp"
                 android:indeterminate="true"
-                android:indeterminateTint="@color/white"
+                android:indeterminateTint="@color/black"
                 android:indeterminateTintMode="src_atop"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/textView1"
