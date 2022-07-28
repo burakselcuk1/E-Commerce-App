@@ -17,10 +17,8 @@ class SignupFragment : BaseFragment<FragmentSignupBinding, SignUpViewModel>(
     viewModelClass = SignUpViewModel::class.java
 ) {
     override fun onInitDataBinding() {
-        val cardView = view?.findViewById<CardView>(R.id.cardView)
 
         val progressButton = view?.findViewById<ProgressBar>(R.id.progressBar)
-
         if (progressButton != null) {
             progressButton.getIndeterminateDrawable().setColorFilter(
                 getResources().getColor(R.color.white),
@@ -33,7 +31,6 @@ class SignupFragment : BaseFragment<FragmentSignupBinding, SignUpViewModel>(
                 val progressButton = view?.let { it1 -> context?.let { it2 -> ProgressButton(it2, it1) } }
 
                 progressButton?.ActiveButton()
-
                 Handler().postDelayed({
                     progressButton?.finishButton()
                     Handler().postDelayed({
