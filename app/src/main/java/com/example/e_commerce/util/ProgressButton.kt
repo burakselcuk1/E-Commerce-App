@@ -34,12 +34,4 @@ class ProgressButton(context: Context, view: View) {
         text.text ="Done"
         checkImage.visibility = View.VISIBLE
     }
-
-    fun ActiveButtonLoginFragment(){
-        progressButton.animation = fade_in
-        text.animation = fade_in
-        progressButton.visibility = View.VISIBLE
-        text.text ="Please Wait..."
-    }
-
 }
